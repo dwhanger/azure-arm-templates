@@ -9,10 +9,7 @@
       "type": "string"
     },
     "sourceImageVhdUri": {
-      "type": "string",
-      "metadata": {
-        "description": "The source of the blob containing the custom image, must be in the same region of the deployment."
-      }
+      "type": "string"
     },   
     "vmssName": {
       "type": "string"
