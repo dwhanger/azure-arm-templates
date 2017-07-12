@@ -33,7 +33,7 @@
                     "value": "[concat(parameters('vmssName'), 'Lb')]"
                 }
             },
-            "templateUri": "[concat(variables('baseTemplateUri'), 'lb.json')]"
+            "templateUri": "[concat(variables('baseTemplateUriDwhanger'), 'lb.json')]"
         },
         "saLogicManaged": {
             "parameters": {},
