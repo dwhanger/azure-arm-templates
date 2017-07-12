@@ -12,10 +12,10 @@
             "value": "password"
         },
         "image": {
-            "value": "Ubuntu16.04-LTS"
+            "value": "xxxxxx"
         },
         "sourceImageVhdUri": {
-            "value": "https://dwhangertestlinux.blob.core.windows.net/vhds/xenial-server-cloudimg-amd64-disk1.vhd"
+            "value": "xxxxxxx"
         },
         "vmSku": {
             "value": "Standard_A1"
@@ -42,7 +42,7 @@
             "value": "eastus"
         },
         "username": {
-            "value": "dwhanger"
+            "value": "xxxxxx"
         },
         "scaleOutInterval": {
             "value": "1"
@@ -57,16 +57,16 @@
             "value": "15"
         },
         "pipLabel": {
-            "value": "dwhanger-devint-linuxub"
+            "value": "xxxxxxxxxxx"
         },
         "password": {
-            "value": "Password1234"
+            "value": "xxxxxxxx"
         },
         "scaleOutCPUPercentageThreshold": {
             "value": "65"
         },
         "vmssName": {
-            "value": "dwhangervmssdevintlinuxub"
+            "value": "xxxxxxxxxx"
         }
     }
 }
