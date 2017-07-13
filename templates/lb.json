@@ -81,7 +81,7 @@
                     "probe": {
                       "id": "[concat(resourceId('Microsoft.Network/loadBalancers', parameters('lbName')), '/probes/tcpHTTPProbe')]"
                     },
-                    "loadDistribution": "Default",
+                    "loadDistribution": "Default"
                 }
             }
         ],
