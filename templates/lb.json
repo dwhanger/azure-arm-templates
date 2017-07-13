@@ -71,17 +71,17 @@
                         "id": "[concat(resourceId('Microsoft.Network/loadBalancers', parameters('lbName')), '/frontendIPConfigurations/LoadBalancerFrontEnd')]"
                     },
                     "backendAddressPool": {
-                        "id": "[concat(resourceId('Microsoft.Network/loadBalancers', parameters('lbName')), '/backendAddressPool/lbBackendPool')]"
+                        "id": "[concat(resourceId('Microsoft.Network/loadBalancers', parameters('lbName')), '/backendAddressPools/lbBackendPool')]"
                     },
                     "protocol": "Tcp",
                     "frontendPort": "[variables('httpPort')]",
                     "backendPort": "[variables('httpPort')]",
                     "enableFloatingIP": false,
                     "idleTimeoutInMinutes": 5,
+                    "loadDistribution": "Default",
                     "probe": {
                       "id": "[concat(resourceId('Microsoft.Network/loadBalancers', parameters('lbName')), '/probes/tcpHTTPProbe')]"
-                    },
-                    "loadDistribution": "Default"
+                    }
                 }
             }
         ],
