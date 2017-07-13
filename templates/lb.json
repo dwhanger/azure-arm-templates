@@ -72,7 +72,7 @@
                     },
                     "backendAddressPool": {
                         "id": "[concat(resourceId('Microsoft.Network/loadBalancers', parameters('lbName')), '/backendAddressPool/lbBackendPool')]"
-                    }
+                    },
                     "protocol": "Tcp",
                     "frontendPort": "[variables('httpPort')]",
                     "backendPort": "[variables('httpPort')]",
