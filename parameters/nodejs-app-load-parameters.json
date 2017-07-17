@@ -67,6 +67,15 @@
         },
         "vmssName": {
             "value": "dwhangervmssloadlinuxub"
+        },
+        "vnetName": {
+            "value": "muse1-nd01-n001-vn01"
+        },
+        "subnetName": {
+            "value": "10.82.140.0/22"
+        },
+        "subnetAddressSpaceName": {
+            "value": "10.82.0.0/16"
         }
     }
 }

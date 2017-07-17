@@ -180,6 +180,28 @@
                 "description": "String used as a base for naming resources. Must be 3-61 characters in length."
             }
         },
+        "vnetName": {
+            "maxLength": 61,
+            "defaultValue": "muse1-nd01-n001-vn01",
+            "type": "string",
+            "metadata": {
+                "description": "vnet name for the subscription"
+            }
+        },
+        "subnetName": {
+            "defaultValue": "10.82.140.0/22",
+            "type": "string",
+            "metadata": {
+                "description": "subnet in cidr format eg: 10.82.140.0/22"
+            }
+        },
+        "subnetAddressSpaceName": {
+            "defaultValue": "10.0.0.0/16",
+            "type": "string",
+            "metadata": {
+                "description": "subnet address space in cidr format eg: 10.0.0.0/16"
+            }
+        },
         "sshPublicKey": {
             "defaultValue": "",
             "type": "string"
@@ -193,16 +215,22 @@
             "properties": {
                 "templateLink": {
                     "contentVersion": "1.0.0.0",
-                    "uri": "[concat(variables('baseTemplateUri'), 'vnet.json')]"
+                    "uri": "[concat(variables('baseUrlDwhanger'), 'vnet.json')]"
                 },
                 "mode": "Incremental",
                 "parameters": {
-                    "vnetName": {
-                        "value": "[concat(parameters('vmssName'), 'Vnet')]"
-                    },
                     "location": {
                         "value": "[parameters('location')]"
-                    }
+                    },
+                    "vnetName": {
+                        "value": "[parameters('vnetName')]"
+                    },
+                    "subnetName": {
+                        "value": "[parameters('subnetName')]"
+                    },
+                    "subnetAddressSpaceName": {
+                        "value": "[parameters('subnetAddressSpaceName')]"
+                    },
                 }
             }
         },
@@ -349,5 +377,11 @@
                 "vmssDep"
             ]
         }
-    ]
+    ],
+    "outputs": {
+        "fqdn": {
+            "type": "String",
+            "value": "[reference(resourceId('Microsoft.Network/publicIPAddresses',variables('pipName')),'2016-03-30').dnsSettings.fqdn]"
+        }
+    }
 }
