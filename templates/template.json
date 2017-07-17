@@ -230,7 +230,7 @@
                     },
                     "subnetAddressSpaceName": {
                         "value": "[parameters('subnetAddressSpaceName')]"
-                    },
+                    }
                 }
             }
         },
