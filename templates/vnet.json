@@ -7,6 +7,12 @@
     },
     "vnetName": {
       "type": "string"
+    },
+    "subnetName": {
+      "type": "string"
+    },
+    "subnetAddressSpaceName": {
+      "type": "string"
     }
   },
   "variables": {},
@@ -19,14 +25,14 @@
       "properties": {
         "addressSpace": {
           "addressPrefixes": [
-            "10.82.140.0/16"
+            "[parameters('subnetAddressSpaceName')]"
           ]
         },
         "subnets": [
           {
             "name": "default",
             "properties": {
-              "addressPrefix": "10.82.140.0/22"
+              "addressPrefix": "[parameters('subnetName')]"
             }
           }
         ]

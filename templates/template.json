@@ -215,7 +215,7 @@
             "properties": {
                 "templateLink": {
                     "contentVersion": "1.0.0.0",
-                    "uri": "[concat(variables('baseUrlDwhanger'), 'vnet.json')]"
+                    "uri": "[concat(variables('baseTemplateUriDwhanger'), 'vnet.json')]"
                 },
                 "mode": "Incremental",
                 "parameters": {
@@ -230,7 +230,7 @@
                     },
                     "subnetAddressSpaceName": {
                         "value": "[parameters('subnetAddressSpaceName')]"
-                    },
+                    }
                 }
             }
         },
@@ -377,11 +377,5 @@
                 "vmssDep"
             ]
         }
-    ],
-    "outputs": {
-        "fqdn": {
-            "type": "String",
-            "value": "[reference(resourceId('Microsoft.Network/publicIPAddresses',variables('pipName')),'2016-03-30').dnsSettings.fqdn]"
-        }
-    }
+    ]
 }
