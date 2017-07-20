@@ -69,13 +69,13 @@
             "value": "dwhangervmssdevintlinuxub"
         },
         "vnetName": {
-            "value": "muse1-nd01-n001-vn01"
+            "value": "dwhangervmssdevintlinuxub-vnet"
         },
         "subnetName": {
-            "value": "10.82.140.0/22"
-        },
+              "value": "10.0.0.0/21"
+          },
         "subnetAddressSpaceName": {
-            "value": "10.82.0.0/16"
+              "value": "10.0.0.0/16"
         }
     }
 }
