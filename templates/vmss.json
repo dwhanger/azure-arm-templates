@@ -79,6 +79,12 @@
       "version": "latest",
       "offer": "CentOS"
     },
+    "imageCentOs7.3": {
+      "sku": "7.3",
+      "publisher": "OpenLogic",
+      "version": "latest",
+      "offer": "CentOS"
+    },
     "imageCoreOsBeta": {
       "sku": "Beta",
       "publisher": "CoreOS",
