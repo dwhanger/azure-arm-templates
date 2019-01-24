@@ -5,10 +5,10 @@
         "vmssTemplateUri": "[concat(variables('baseTemplateUriDwhanger'), 'vmss.json')]",
         "lbLogic": "[variables(concat('lbLogic', parameters('singlePlacementGroup')))]",
         "diskTypeIfSinglePlacementGrouptrue": "[parameters('diskTypeIfSmall')]",
-        "autoscaleTemplateUri": "[concat(variables('baseTemplateUri'), 'autoscale.json')]",
+        "autoscaleTemplateUri": "[concat(variables('baseTemplateUriDwhanger'), 'autoscale.json')]",
         "lbLogicfalse": {
             "parameters": {},
-            "templateUri": "[concat(variables('baseTemplateUri'), 'null.json')]"
+            "templateUri": "[concat(variables('baseTemplateUriDwhanger'), 'null.json')]"
         },
         "baseTemplateUri": "[concat(parameters('baseUrl'), '/')]",
         "baseTemplateUriDwhanger": "[concat(parameters('baseUrlDwhanger'), '/')]",
@@ -37,7 +37,7 @@
         },
         "saLogicManaged": {
             "parameters": {},
-            "templateUri": "[concat(variables('baseTemplateUri'), 'null.json')]"
+            "templateUri": "[concat(variables('baseTemplateUriDwhanger'), 'null.json')]"
         },
         "saLogicUnmanaged": {
             "parameters": {
@@ -51,7 +51,7 @@
                     "value": "[parameters('location')]"
                 }
             },
-            "templateUri": "[concat(variables('baseTemplateUri'), 'sa.json')]"
+            "templateUri": "[concat(variables('baseTemplateUriDwhanger'), 'sa.json')]"
         },
         "_comment1": "if singlePlacementGroup is true (aka 'small scale set'), then customers can choose managed or unmanaged; if false (aka 'large scale set'), only managed is allowed",
         "_comment0": "concat 'lbLogic' with parameters('singlePlacementGroup') to get back the name of a variable containing the template url and parameter set for either deploying the lb or not"
